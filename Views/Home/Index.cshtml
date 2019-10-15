@@ -1,0 +1,40 @@
+﻿@model List<User>
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+</div>
+<a href = "new">Add a Chef</a>
+
+<div class="text-center">
+    <a href="">Chefs </a> |
+    <a href="dishes">Dishes</a>
+</div>
+<h2>Check out our roster of Chefs !</h2>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Age</th>
+      <th scope="col"># of Dishes</th>
+    </tr>
+  </thead>
+  <tbody>
+
+        @foreach(var user in Model)
+        {
+    <tr>
+         <td>@user.FirstName @user.LastName</td>
+         @{int age = DateTime.Now.Year - user.dateOfBirth.Year;}
+         <td>@age</td>
+
+           <td>@user.CreatedDishes.Count()</td>
+         
+    
+    </tr>
+    }
+    
+  </tbody>
+</table>
+
+

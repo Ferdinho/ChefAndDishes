@@ -1,0 +1,21 @@
+﻿@model User
+
+<a href ="/">Home</a>
+<h1>Add a chef !</h1>
+<form action = "/postTheChef" method="post">
+            <span asp-validation-for="FirstName"></span><br>
+            FirstName : <br>
+            <input asp-for="FirstName" type="text"><br>
+            <span asp-validation-for="LastName"></span><br>
+            LastName : <br>
+            <input asp-for="LastName" type="text"><br>
+            <span asp-validation-for="dateOfBirth"></span><br>
+            Date of Birth : <br>
+            <input asp-for="dateOfBirth" type="date"><br>
+
+    <button type="submit">Submit</button>
+</form>
+
+
+
+
